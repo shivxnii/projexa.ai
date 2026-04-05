@@ -1,0 +1,18 @@
+FEATURES = [
+    "CPU_Utilization (%)",
+    "Memory_Consumption (MB)",
+    "Task_Execution_Time (ms)",
+    "System_Throughput (tasks/sec)",
+    "Task_Waiting_Time (ms)",
+    "Number_of_Active_Users",
+    "Network_Bandwidth_Utilization (Mbps)",
+    "Error_Rate (%)",
+    "Marginal_Impact",           # our custom feature
+    "Job_Priority_enc",
+    "Scheduler_Type_enc",
+    "Resource_Allocation_enc",
+]
+
+X     = df[FEATURES]
+y_cls = df["SLO_Violation"]     # for classification
+y_reg = df["Stress_Score"]      # for regression
